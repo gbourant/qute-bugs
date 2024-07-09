@@ -1,0 +1,14 @@
+{@String errorKeys}
+{@String errorFields}
+{!#if errorKeys?? && inject:v.ifElementHasError(errorFields, errorKeys)!}
+{#if inject:v.ifElementHasError(errorFields, errorKeys)}
+     <div class="errors" role="alert">
+        <div class="flex flex-col">
+           {#for errorMessage in inject:v.getErrorMessages(errorFields,errorKeys)}
+             <span class="font-medium">
+                &bullet; {errorMessage}
+             </span>
+           {/for}
+        </div>
+     </div>
+{/if}

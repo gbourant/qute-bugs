@@ -1,5 +1,6 @@
 package gr;
 
+import io.quarkus.qute.Qute;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -9,8 +10,9 @@ import jakarta.ws.rs.core.MediaType;
 public class HelloResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_HTML)
     public String hello() {
-        return "Hello from Quarkus REST";
+        // TODO: ENV!
+        return Qute.fmt("{#mkouba /}").render();
     }
 }
