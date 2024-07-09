@@ -53,6 +53,17 @@
             <artifactId>quarkus-renarde</artifactId>
             <version>3.0.18</version>
         </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.playwright</groupId>
+            <artifactId>quarkus-playwright</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.web-bundler</groupId>
+            <artifactId>quarkus-web-bundler</artifactId>
+            <version>1.6.0</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -12,7 +12,16 @@ public class HelloResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String hello() {
-        // TODO: ENV!
         return Qute.fmt("{#mkouba /}").render();
     }
+
+    @GET
+    @Path("env")
+    @Produces(MediaType.TEXT_HTML)
+    public String env() {
+        // here the ENV variable is available
+        return Qute.fmt("{#bundle /}").render();
+    }
+
+
 }
